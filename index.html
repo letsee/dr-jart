@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Letsee WebAR Demo</title>
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no, viewport-fit=cover" name="viewport" />
+
+    <!-- bootscript & jquery-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"  href="./css/style.css" type="text/css">
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+    <!-- Access engine from ( server or local )  -->
+    <!--<script src="https://intra.letsee.io:6443/webar?key=58eb80abb9fe9589e7f3435f52342ed26d46612af1e2cef7fbf472da1c9d4eea&env=dev&version=0_9_20"></script>-->
+    <script src="https://app.letsee.io/webar?key=58eb80abb9fe9589e7f3435f52342ed26d46612af1e2cef7fbf472da1c9d4eea&env=dev"></script>
+    <!--<script src="http://localhost:6931/lib/letsee-0.9.20.js"></script>-->
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700,900|Roboto:400,700,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+
+    <!-- swiper.js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+
+    <!-- slick.js -->
+    <script src='https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js'></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css'>
+
+
+    <style type="text/css" media="place">
+        #swiper-container  {
+            -letsee-target: uri('dr-jart.json');
+            -letsee-transform: translate(0, -100, 0);
+        }
+
+        /*#productBanner {*/
+        /*-letsee-target: uri('dr-jart.json');*/
+        /*-letsee-transform: translate(90, 510, -10);*/
+        /*}*/
+        /*#content03 {*/
+        /*-letsee-target: uri('dr-jart.json');*/
+        /*-letsee-transform: translate(415, 390, -10);*/
+        /*}*/
+        /*#content01 {*/
+        /*-letsee-target: uri('dr-jart.json');*/
+        /*-letsee-transform: translate(415, 55, -10);*/
+        /*}*/
+        /*#relatedProduct {*/
+        /*-letsee-target: uri('dr-jart.json');*/
+        /*-letsee-transform: translate(415, -265, 0);*/
+        /*}*/
+        /*#productInfo {*/
+        /*-letsee-target: uri('dr-jart.json');*/
+        /*-letsee-transform: translate(-415, 340, -10);*/
+        /*}*/
+        /*.productVideo {*/
+        /*-letsee-target: uri('dr-jart.json');*/
+        /*-letsee-transform: translate(-415, 25, -10);*/
+        /*}*/
+        /*#productRating {*/
+        /*-letsee-target: uri('dr-jart.json');*/
+        /*-letsee-transform: translate(-415, -250, -11);*/
+
+        /*}*/
+        /*#reviewContent {*/
+        /*-letsee-target: uri('dr-jart.json');*/
+        /*-letsee-transform: translate(-415, -360, -10);*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+<header>
+    <div id="openNav" class="floatLeft"><img src="asset/plus_icon.svg"></div>
+    <div class="floatRight">
+        <div id="search"><img src="asset/search_icon.svg"></div>
+        <div id="menu"><img src="asset/menu_icon.svg"></div>
+    </div>
+</header>
+
+<div id="wrap">
+    <div id="productPicture">
+        <div id="productMedia">
+            <img src="asset/cica.png">
+        </div>
+        <div id="productBanner">
+            <img src="asset/product-banner.png">
+        </div>
+        <div id="arBtn">
+            <div class="to-ar hide-ar">
+                <img src="asset/ar-btn.svg">
+                <span>AR VIEW</span>
+            </div>
+            <div class="to-web hide-web">
+                <div>Web View</div>
+            </div>
+        </div>
+    </div>
+    <div id="productTop">
+        <div id="productLabel">
+            <span>BEST</span>
+        </div>
+        <div id="productInfo">
+            <div class="title">Cicapair Calming Mask</div>
+            <div class="tag">#urgent calming mask</div>
+            <div class="price">$17.25</div>
+        </div>
+    </div>
+    <div id="productRating">
+        <div id="ratePoint"><span>4.9</span></div>
+        <div id="rateStar"><span>★★★★★</span></div>
+        <div id="rateCount">
+            <span class="label">total review - </span><span class="count">72</span>
+        </div>
+    </div>
+    <div id="detail">
+        <div id="detailTab">
+            <ul>
+                <li><a href="#"><span>Information</span></a></li>
+                <li><a href="#"><span>Review</span></a></li>
+                <li><a href="#"><span>guide</span></a></li>
+            </ul>
+        </div>
+        <div id="detailContent">
+            <div class="contentWrap">
+                <div class="detailImg">
+                    <img src="asset/con-5-en.png">
+                </div>
+                <div class="contentBody" id="content01">
+                    <div class="titleContent hide-web">
+                        <p class="subtitle">Strong CICA</p>
+                        <p class="title">Calming Mask</p>
+                        <p class="point"><span>3</span> POINT</p>
+                    </div>
+                    <!--<div id="add1Active">-->
+                    <div>
+                        <p class="title">Dermo Science Green Science with green power</p>
+                        <p class="body hide-ar">
+                            Green care of Centella asiatica which protects calms and protects skin with moisture and 3 kinds of minerals’ dermatology care which provides healthy energy are combined. We recommend you use <span>urgent care for sensitive skin with Dr. Jart’s Green Science.</span>
+                        </p>
+                    </div>
+                    <!--<div id="add2Active">-->
+                    <div>
+                        <p class="title">Centella essence which is rapidly conveyed to skin with one sheet</p>
+                        <p class="body hide-ar">
+                            <span>Essence ingredient of Centella</span> is made into liposome with natural proteolipid and it is more rapidly conveyed to skin.
+                        </p>
+                    </div>
+                    <!--<div id="add3Active">-->
+                    <div>
+                        <p class="title">Immediately calming hot skin</p>
+                        <p class="body hide-ar">
+                            As it contains snow ice ingredient which can be used safely even for sensitive and hot skin,
+                            <span>it immediately and coolly calms hot feeling of skin. </span>
+                        </p>
+                    </div>
+                </div>
+                <!-- TODO : additional 컨텐츠 수정 -->
+                <div id="additional01" class="addContent ">
+                    <div class="inner">
+                        <div>
+                            <div class="title">
+                                <p>Dermo Science <br/>
+                                    with green power</p>
+                            </div>
+                            <div class="topIcon"><img src="asset/plus.png" ></div>
+                        </div>
+                        <div class="body">
+                            <p>
+                                Green care of Centella asiatica which protects calms and protects skin with moisture and 3 kinds of minerals’ dermatology care which provides healthy energy are combined. We recommend you use
+                                <span>urgent care for sensitive skin with Dr. Jart’sGreen Science.</span>
+                            </p>
+                        </div>
+                        <div class="closeBtn"><img src="asset/minus.png"></div>
+                    </div>
+                </div>
+                <div id="additional02" class="addContent">
+
+                    <div class="inner">
+                        <div>
+                            <div class="title">
+                                <p>Centella essence <br/>
+                                    conveyed to skin <br/>
+                                    rapidly with one sheet
+                                </p>
+                            </div>
+                            <div class="topIcon"><img src="asset/bottle.png" ></div>
+                        </div>
+                        <div class="body">
+                            <p>
+                                <span>Essence ingredient of Centella</span> is made into liposome with natural proteolipid and it is more rapidly conveyed to skin.
+                            </p>
+                        </div>
+                        <div class="closeBtn"><img src="asset/minus.png"></div>
+                    </div>
+                </div>
+                <div id="additional03" class="addContent">
+                    <div class="inner">
+                        <div>
+                            <div class="title">
+                                <p>
+                                    Immediately
+                                    <br/>calming hot skin
+                                </p>
+                            </div>
+                            <div class="topIcon"><img src="asset/skin.png" ></div>
+                        </div>
+                        <div class="body">
+                            <p>
+                                As it contains snow ice ingredient which can be used safely even for sensitive and hot skin,
+                                <span>it immediately and coolly calms hot feeling of skin.</span>
+                            </p>
+                        </div>
+                        <div class="closeBtn"><img src="asset/minus.png"></div>
+                    </div>
+                </div>
+                <div id="checkList">
+                    <img src="asset/con-2-en.png">
+                    <p>*KC skin Research Center Inc.
+                        research period : June 7, 2018 ~ July 6, 2018/21 persons/there
+                        can be differences between individuals.
+                    </p>
+                </div>
+                <div id="productVideo">
+                    <video id="productVideoContent" playsinline controls autoplay muted loop>
+                        <source src="asset/product_video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div style="display: none;" class="contentBody" id="content02">
+                    <div class="">
+                        <ul>
+                            <li>안심 포뮬라</li>
+                            <li>안심 포뮬라</li>
+                            <li>안심 포뮬라</li>
+                            <li>안심 포뮬라</li>
+                        </ul>
+                        <p>*(주)KC피부임상연구센터 / 연구기간 : 2018년 6월 7일 ~ 2018년 7월 6일 / 21명 / 개인차 있음</p>
+                    </div>
+                </div>
+                <div class="detailImg">
+                    <img src="asset/con-6-en.png">
+                </div>
+                <!--<div class="contentBody" id="content03">-->
+                    <!--<div>-->
+                        <!--<p class="title">-->
+                            <!--병풀의 성분을<br>-->
+                            <!--그대로 전달하는<br>-->
+                            <!--식물유래 마스크 시트-->
+                        <!--</p>-->
+                        <!--&lt;!&ndash;<p class="body">&ndash;&gt;-->
+                        <!--&lt;!&ndash;100% 식물 유래 섬유 시트를 사용하여 부드럽고 피부에 부담이 적어 자극에 민감한 피부에도 걱정없이 안심하고 사용하실 수 있습니다.&ndash;&gt;-->
+                        <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="contentBody" id="detailReview">
+                    <p class="reviewTitle">Review</p>
+                    <div class="inner">
+                        <ul>
+                            <li>
+                                <div id="reviewContent" class="reviewContent">
+                                    <div class="hide-ar reviewHeader">
+                                        <p class="reviewStart">
+                                            <span>comment</span>
+                                            ★★★★★
+                                        </p>
+                                    </div>
+                                    <div class="reviewImage">
+                                        <img src="asset/review_photo-01.png">
+                                    </div>
+                                    <div class="reviewText">
+                                        <p class="title">After all Cica<br>
+                                            I think the doctor is the truth</p>
+                                        <div class="bodyDiv">
+                                            <p class="body">
+                                                In particular, as soon as I apply it, I feel soothing while wrapping my skin. The area around the ball is exceptionally sensitive, but after using it a few times, it seems to calm down quickly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="reviewFooter hide-ar">
+                                        <span class="reviewId">ari****</span>
+                                        <span class="reviewDate">2019.10.20</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="reviewContent">
+                                    <div class="hide-ar reviewHeader">
+                                        <p class="reviewStart">
+                                            <span>comment</span>
+                                            ★★★★★
+                                        </p>
+                                    </div>
+                                    <div class="reviewImage">
+                                        <img src="asset/review_photo-02.png">
+                                    </div>
+                                    <div class="reviewText">
+                                        <p class="title">These days, I always use<br>
+                                            ‘sleepair’ as the last skin care.</p>
+                                        <p class="body">
+                                            Especially when I put ‘sleepair’ on my skin, it feels like something is covering my skin and calming it down.☆ I’m very sensitive around my face’s cheeks, but since I’ve used ‘sleepair’ a few times, my skin seems to calm down quickly.
+                                        </p>
+                                    </div>
+                                    <div class="reviewFooter hide-ar">
+                                        <span class="reviewId">ari****</span>
+                                        <span class="reviewDate">2019.10.20</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="reviewContent">
+                                    <div class="hide-ar reviewHeader">
+                                        <p class="reviewStart">
+                                            <span>comment</span>
+                                            ★★★★★
+                                        </p>
+                                    </div>
+                                    <div class="reviewImage">
+                                        <img src="asset/review_photo-03.png">
+                                    </div>
+                                    <div class="reviewText">
+                                        <p class="title">When your skin is in a bad condition,
+                                            it’s very effective if you put it on thick and sleep.
+                                        <p class="body">
+                                        I couldn’t sleep well for two days, so my skin became dull and I had trouble with my skin, but I put on a pair of ‘sleepair’ while I was sleeping, and I got much better.
+                                        </p>
+                                    </div>
+                                    <div class="reviewFooter hide-ar">
+                                        <span class="reviewId">ari****</span>
+                                        <span class="reviewDate">2019.10.20</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="reviewMore">
+                        <span>more</span>
+                    </a>
+                </div>
+                <div id="relatedProduct">
+                    <div class="wrap">
+                        <p class="title">Related Product</p>
+                        <div class="product cf">
+                            <ul>
+                                <li>
+                                    <div class="inner">
+                                        <img src="asset/related-product.png">
+                                        <div class="relatedInfo">
+                                            <p class="name">Dermask Ultra Jet
+                                                Feeling solution</p>
+                                            <p class="tag">#Feeling Solution Mask</p>
+                                            <p class="price">25,000won</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <img src="asset/related-product-black.png">
+                                        <div class="relatedInfo" style="padding-top: 17px;">
+                                            <p class="name">Dermask Ultra Jet Porecting </p>
+                                            <p class="tag">#The Pore Solution Mask</p>
+                                            <p class="price">20,000won</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cartBtn">
+        <div id="buyBtn" onclick="location.href='https://us.drjart.com/products/dermask-masks-peeling-solution'">Buy now</div>
+        <div id="wishList"><img src="asset/wishlist.png"></div>
+    </div>
+    <div id="arHeader">
+        <!--<div id="logo"><img src="asset/plus_icon.svg"/></div>-->
+        <div id="mobile">Web View</div>
+        <div id="webview"><img src="asset/ic_webview.png"/></div>
+    </div>
+</div>
+<div id="ar-btn">
+</div>
+
+<div id="dummyImage">
+    <!--<img src="asset/dummy.png">-->
+</div>
+
+<!-- Swiper -->
+<div id="swiper-container" class="row" style="display: none">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-item">
+            <div id="productInfoAR">
+                <div class="title">Cicapair Calming Mask</div>
+                <div class="tag">#urgent calming mask</div>
+                <div class="price">$17.25</div>
+            </div>
+            <div id="productVideoAR">
+                <video playsinline controls autoplay muted loop>
+                    <source src="asset/product_video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-item">
+            <div id="content01AR">
+                <div id="contentHeader">
+                    <p class="subtitle">Strong CICA</p>
+                    <p class="mainTitle">Calming Mask</p>
+                    <p class="point"><span>3</span> POINT</p>
+                </div>
+                <div id="add1Active" class="contentItem">
+                    <p class="title">Dermo Science<br class="hide-web">Green Science with <br class="hide-web">green power</p>
+                </div>
+                <div id="add2Active" class="contentItem">
+                    <p class="title">Centella <br class="hide-web">which is rapidly <br class="hide-web">conveyed to skin<br class="hide-web">with one sheet</p>
+                </div>
+                <div id="add3Active" class="contentItem">
+                    <p class="title">Immediately <br class="hide-web">calming hot skin</p>
+                </div>
+            </div>
+            <div id="content03AR">
+                <div>
+                    <p class="title">
+                        Plant-originatd mask sheet<br>
+                        which conveys the<br>
+                        ingredients of Centella intact
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-item">
+            <div id="productRatingAR">
+                <div class="ratePoint"><span>4.9</span></div>
+                <div class="rateStar"><span class="star">★★★★★</span></div>
+                <div class="rateCount">
+                    <span class="label">total review - </span><span class="count">72</span>
+                </div>
+            </div>
+            <div id="reviewContentAR" class="reviewContent">
+                <div class="hide-ar reviewHeader">
+                    <p class="reviewStart">
+                        <span>평점</span>
+                        ★★★★★
+                    </p>
+                </div>
+                <div class="reviewImage">
+                    <img src="asset/review_photo-01.png">
+                </div>
+                <div class="reviewText">
+                    <p class="title">After all Shika<br>
+                        I think the doctor is the truth</p>
+                    <div class="bodyDiv">
+                        <p class="body">
+                            In particular, as soon as I apply it, I feel soothing while wrapping my skin. The area around the ball is exceptionally sensitive, but after using it a few times, it seems to calm down quickly.
+                        </p>
+                    </div>
+                </div>
+                <div class="reviewFooter hide-ar">
+                    <span class="reviewId">ari****</span>
+                    <span class="reviewDate">2019.10.20</span>
+                </div>
+            </div>
+            <div id="relatedProductAR">
+                <div id="swiper-related-product-ar">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="wrap">
+                            <p class="title">Related Product</p>
+                            <div class="product cf">
+                                <div class="inner">
+                                    <img src="asset/related-product.png">
+                                    <div class="relatedInfo">
+                                        <p class="name">Dermask Ultra Jet <br>Feeling solution</p>
+                                        <p class="tag">#Feeling Solution Mask</p>
+                                        <p class="price">25,000won</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="wrap">
+                                <p class="title">Related Product</p>
+                                <div class="product cf">
+                                    <div class="inner">
+                                        <img src="asset/related-product-black.png">
+                                        <div class="relatedInfo">
+                                            <p class="name">Dermask Ultra Jet <br>Porecting Solution</p>
+                                            <p class="tag">#The Pore Solution Mask</p>
+                                            <p class="price">20,000won</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-pagenation"></div>
+</div>
+
+<script>
+
+  const config = {
+    appKey: '8hTenCFZL3q3jIBZLHoQ72QYTvJdKM5IROK5hdUS69JeH91iGfWD7ApQWZSwzN2g',
+    trackerType: 'IMAGE',
+    bodyId: 'fallback-test'
+  };
+
+  let sliderList = null;
+
+  function resetSlide() {
+    sliderList.forEach(value => {
+      value.position._y = 0;
+      value.opacity = 0;
+
+      TweenLite.to(
+        value.element,
+        0,
+        {
+          opacity : 0,
+          display: 'none'
+        }
+      )
+    })
+  }
+
+  function slide(num) {
+    const ele = sliderList[num];
+    TweenLite.to(
+      ele.position,
+      0.5,
+      {
+        ease: Back.easeOut.config(1.7),
+        _y: -275
+      });
+
+
+    TweenLite.to(
+      ele.element,
+      0.5,
+      {
+        opacity : 1,
+        display: 'block'
+      }
+    )
+  }
+
+  function toggleARView() {
+    if (!arFlag) {
+      letsee.init(config, onLoaded);
+      arFlag = true;
+    } else {
+      if (letsee.isPause) {
+        letsee.resume();
+      } else {
+        letsee.pause(true);
+        resetSlide();
+      }
+    }
+  }
+
+  function initSwiper() {
+    let mainSwiper = new Swiper('#swiper-container', {
+      effect: 'coverflow',
+      loop: false,
+      centeredSlides: true,
+      slidesPerView: 1,
+      initialSlide: 1,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: -100,
+        depth: 650,
+        modifier: 1,
+        slideShadows: false
+      },
+      pagination:{
+        el: '.swiper-pagenation',
+        type: 'bullets',
+        clickable: 'true'
+      },
+      on: {
+        touchStart: function() {
+          console.log('change');
+          resetSlide()
+        }
+      },
+    });
+
+    let relatedProductARSwiper = new Swiper('#swiper-related-product-ar', {
+      effect: 'flip',
+      loop: false,
+      autoplay: {
+        delay: 3000,
+        waitForTransition: false,
+      },
+      speed:1000,
+      allowTouchMove:false,
+      centeredSlides: true,
+      slidesPerView: 1,
+      initialSlide: 0,
+    })
+  }
+
+  const onLoaded = () => {
+    console.log("Letsee started!");
+
+    const add01 = new letsee.DOMRenderable(document.getElementById('additional01'));
+    const add02 = new letsee.DOMRenderable(document.getElementById('additional02'));
+    const add03 = new letsee.DOMRenderable(document.getElementById('additional03'));
+    sliderList = [add01, add02, add03];
+    sliderList.forEach(value => {
+      letsee.getAllEntities()[0].addRenderable(value);
+      value.position.set(0, 0, 1);
+    });
+    setTimeout(function() {
+      document.getElementById('add1Active').addEventListener('click', (e) => {
+        resetSlide();
+        slide(0);
+      });
+      document.getElementById('add2Active').addEventListener('click', (e) => {
+        resetSlide();
+        slide(1);
+      });
+      document.getElementById('add3Active').addEventListener('click', (e) => {
+        resetSlide();
+        slide(2);
+      });
+
+      document.querySelectorAll('.closeBtn').forEach(val => {
+        val.addEventListener('click', resetSlide);
+      });
+    }, 3000);
+  };
+
+  let isSwiperInitialized = false;
+  letsee.onTrackStart(() => {
+    if (!isSwiperInitialized){
+      initSwiper();
+      isSwiperInitialized = true
+    }
+  });
+
+  let arFlag = false;
+  const arBtn = document.querySelector('#arBtn');
+  const arHeader = document.getElementById('arHeader');
+  const mobile = document.getElementById('mobile');
+
+  mobile.addEventListener('click', (e) => {
+    arHeader.style.display = 'none';
+    arBtn.style.display = 'block';
+    toggleARView();
+  });
+
+  arBtn.addEventListener('click', (e) => {
+    arHeader.style.display = 'block';
+    arBtn.style.display = 'none';
+    toggleARView()
+  });
+</script>
+
+
+<script>
+</script>
+</body>
+</html>
