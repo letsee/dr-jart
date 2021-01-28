@@ -43,7 +43,5 @@ cache.json
 
 docs
 jsdocs
-/css/*.css
-/css/*.css.map
 /temp
 
