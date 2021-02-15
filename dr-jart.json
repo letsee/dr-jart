@@ -1,8 +1,7 @@
 {
-  "size":{
+  "physicalSize": {
     "width": 460,
     "height": 820
   },
-  "image":"dr-jart.png",
-  "scale": 1
+  "image": "dr-jart.jpg"
 }
