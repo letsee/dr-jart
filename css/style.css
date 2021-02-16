@@ -91,23 +91,7 @@ button {
   display: none !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*.addContent {*/
-/*  display: none;*/
-/*}*/
-
-#fallback-test.ar-mode-on .ar-renderer .hide-ar {
+/*#fallback-test.ar-mode-on .ar-renderer .hide-ar {
   display: none !important;
 }
 #fallback-test.ar-mode-on .ar-renderer .hide-web {
@@ -411,12 +395,12 @@ button {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  /* Line Count */
+  !* Line Count *!
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.3em;
   height: 3.9em;
-  /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+  !* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em *!
   margin-top: 3px;
   font-size: 14px;
   color: #2c2c2c;
@@ -459,8 +443,4 @@ button {
 }
 #fallback-test.ar-mode-on .ar-renderer #fallback-test.ar-mode-on #productBanner {
   display: block;
-}
-
-
-
-/*# sourceMappingURL=style.css.map */
+}*/

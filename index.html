@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Dr.Jart+</title>
-<!--    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no, viewport-fit=cover" name="viewport"/>-->
   
   <script src="letsee.js"></script>
   <!--  <script src="https://app.letsee.io/webar?key=58eb80abb9fe9589e7f3435f52342ed26d46612af1e2cef7fbf472da1c9d4eea&env=dev"></script>-->
@@ -11,11 +10,6 @@
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700,900|Roboto:400,700,900&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <script src='https://unpkg.com/jquery@3.5.1/dist/jquery.min.js'></script>
-  
-<!--  <script src="js/lib/tween.min.js"></script>-->
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>-->
-  <script src="https://unpkg.com/gsap@3.6.0/dist/EasePack.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
   
   <!-- swiper.js -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@6.4.11/swiper-bundle.css">
@@ -26,6 +20,7 @@
   <!-- animationCSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   
+  <!-- Client code -->
   <link rel="stylesheet" href="./css/style.css" type="text/css">
   <link rel="stylesheet" href="./css/main.css" type="text/css">
   <script src="js/main.js"></script>
@@ -34,7 +29,6 @@
       -letsee-target: uri('dr-jart.json');
       width: 460px;
       height: 820px;
-      border: 4px solid red;
     }
   </style>
   
@@ -46,7 +40,6 @@
 </head>
 
 <body>
-
 <div id="content-wrapper">
   <header>
     <div id="openNav" class="floatLeft"><img src="asset/plus_icon.svg"></div>
@@ -78,7 +71,7 @@
         </div>
       </div>
     </div>
-  
+    
     <div id="productTop">
       <div id="productLabel">
         <span>BEST</span>
@@ -89,7 +82,7 @@
         <div class="price">$17.25</div>
       </div>
     </div>
-  
+    
     <div id="productRating">
       <div id="ratePoint"><span>4.9</span></div>
       <div id="rateStar"><span>★★★★★</span></div>
@@ -97,7 +90,7 @@
         <span class="label">total review - </span><span class="count">72</span>
       </div>
     </div>
-  
+    
     <div id="detail">
       <div id="detailTab">
         <ul>
@@ -129,7 +122,8 @@
             <div>
               <p class="title">Centella essence which is rapidly conveyed to skin with one sheet</p>
               <p class="body hide-ar">
-                <span>Essence ingredient of Centella</span> is made into liposome with natural proteolipid and it is more
+                <span>Essence ingredient of Centella</span> is made into liposome with natural proteolipid and it is
+                more
                 rapidly conveyed to skin.
               </p>
             </div>
@@ -142,67 +136,6 @@
               </p>
             </div>
           </div>
-          <!-- TODO : additional 컨텐츠 수정 -->
-          <!--<div id="additional01" class="addContent ">
-            <div class="inner">
-              <div>
-                <div class="title">
-                  <p>Dermo Science <br/>
-                    with green power</p>
-                </div>
-                <div class="topIcon"><img src="asset/plus.png"></div>
-              </div>
-              <div class="body">
-                <p>
-                  Green care of Centella asiatica which protects calms and protects skin with moisture and 3 kinds of
-                  minerals’ dermatology care which provides healthy energy are combined. We recommend you use
-                  <span>urgent care for sensitive skin with Dr. Jart’sGreen Science.</span>
-                </p>
-              </div>
-              <div class="closeBtn"><img src="asset/minus.png"></div>
-            </div>
-          </div>-->
-          <!--<div id="additional02" class="addContent">
-          
-            <div class="inner">
-              <div>
-                <div class="title">
-                  <p>Centella essence <br/>
-                    conveyed to skin <br/>
-                    rapidly with one sheet
-                  </p>
-                </div>
-                <div class="topIcon"><img src="asset/bottle.png"></div>
-              </div>
-              <div class="body">
-                <p>
-                  <span>Essence ingredient of Centella</span> is made into liposome with natural proteolipid and it is
-                  more rapidly conveyed to skin.
-                </p>
-              </div>
-              <div class="closeBtn"><img src="asset/minus.png"></div>
-            </div>
-          </div>
-          <div id="additional03" class="addContent">
-            <div class="inner">
-              <div>
-                <div class="title">
-                  <p>
-                    Immediately
-                    <br/>calming hot skin
-                  </p>
-                </div>
-                <div class="topIcon"><img src="asset/skin.png"></div>
-              </div>
-              <div class="body">
-                <p>
-                  As it contains snow ice ingredient which can be used safely even for sensitive and hot skin,
-                  <span>it immediately and coolly calms hot feeling of skin.</span>
-                </p>
-              </div>
-              <div class="closeBtn"><img src="asset/minus.png"></div>
-            </div>
-          </div>-->
           <div id="checkList">
             <img src="asset/con-2-en.png">
             <p>*KC skin Research Center Inc.
@@ -277,7 +210,8 @@
                         ‘sleepair’ as the last skin care.</p>
                       <p class="body">
                         Especially when I put ‘sleepair’ on my skin, it feels like something is covering my skin and
-                        calming it down.☆ I’m very sensitive around my face’s cheeks, but since I’ve used ‘sleepair’ a few
+                        calming it down.☆ I’m very sensitive around my face’s cheeks, but since I’ve used ‘sleepair’ a
+                        few
                         times, my skin seems to calm down quickly.
                       </p>
                     </div>
@@ -351,188 +285,182 @@
         </div>
       </div>
     </div>
-  
+    
     <div id="cartBtn">
       <div id="buyBtn" onclick="location.href='https://us.drjart.com/products/dermask-masks-peeling-solution'">Buy now
       </div>
       <div id="wishList"><img src="asset/wishlist.png"></div>
     </div>
-    
+  
   </div>
 </div>
 
-<!--<div id="ar-btn"></div>
-<div id="dummyImage"></div>-->
-
 <!-- Swiper -->
-<!--<div id="ar-container">-->
-  <div id="swiper-container" class="row" style="display: none">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide swiper-item">
-        <div id="productInfoAR">
-          <div class="title">Cicapair Calming Mask</div>
-          <div class="tag">#urgent calming mask</div>
-          <div class="price">$17.25</div>
-        </div>
-        <div id="productVideoAR">
-          <video playsinline controls autoplay muted loop>
-            <source src="asset/product_video.mp4" type="video/mp4">
-          </video>
-        </div>
+<div id="swiper-container" class="row" style="display: none">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide swiper-item">
+      <div id="productInfoAR">
+        <div class="title">Cicapair Calming Mask</div>
+        <div class="tag">#urgent calming mask</div>
+        <div class="price">$17.25</div>
       </div>
-      <div class="swiper-slide swiper-item">
-        <div id="content01AR">
-          <div id="contentHeader">
-            <p class="subtitle">Strong CICA</p>
-            <p class="mainTitle">Calming Mask</p>
-            <p class="point"><span>3</span> POINT</p>
-          </div>
-          
-          <div id="add1Active" class="contentItem">
-            <p class="title">Dermo Science<br class="hide-web">Green Science with <br class="hide-web">green power</p>
-          </div>
-          <div id="add2Active" class="contentItem">
-            <p class="title">Centella <br class="hide-web">which is rapidly <br class="hide-web">conveyed to skin<br class="hide-web">with one sheet</p>
-          </div>
-          <div id="add3Active" class="contentItem">
-            <p class="title">Immediately <br class="hide-web">calming hot skin</p>
-          </div>
-  
-<!--          <div id="test" style="z-index: 500; background: red; display: none">-->
-            <div id="additional01" class="addContent animate__animated animate__fadeInDown">
-              <div class="inner">
-                <div>
-                  <div class="title">
-                    <p>Dermo Science <br/>
-                      with green power</p>
-                  </div>
-                  <div class="topIcon"><img src="asset/plus.png"></div>
-                </div>
-                <div class="body">
-                  <p>
-                    Green care of Centella asiatica which protects calms and protects skin with moisture and 3 kinds of
-                    minerals’ dermatology care which provides healthy energy are combined. We recommend you use
-                    <span>urgent care for sensitive skin with Dr. Jart’sGreen Science.</span>
-                  </p>
-                </div>
-                <div class="closeBtn"><img src="asset/minus.png"></div>
-              </div>
-            </div>
-            <div id="additional02" class="addContent animate__animated animate__fadeInDown">
-              <div class="inner">
-                <div>
-                  <div class="title">
-                    <p>Centella essence <br/>
-                      conveyed to skin <br/>
-                      rapidly with one sheet
-                    </p>
-                  </div>
-                  <div class="topIcon"><img src="asset/bottle.png"></div>
-                </div>
-                <div class="body">
-                  <p>
-                    <span>Essence ingredient of Centella</span> is made into liposome with natural proteolipid and it is
-                    more rapidly conveyed to skin.
-                  </p>
-                </div>
-                <div class="closeBtn"><img src="asset/minus.png"></div>
-              </div>
-            </div>
-            <div id="additional03" class="addContent animate__animated animate__fadeInDown">
-              <div class="inner">
-                <div>
-                  <div class="title">
-                    <p>
-                      Immediately
-                      <br/>calming hot skin
-                    </p>
-                  </div>
-                  <div class="topIcon"><img src="asset/skin.png"></div>
-                </div>
-                <div class="body">
-                  <p>
-                    As it contains snow ice ingredient which can be used safely even for sensitive and hot skin,
-                    <span>it immediately and coolly calms hot feeling of skin.</span>
-                  </p>
-                </div>
-                <div class="closeBtn"><img src="asset/minus.png"></div>
-              </div>
-            </div>
-<!--          </div>-->
-          
-        </div>
-        <div id="content03AR">
-          <div>
-            <p class="title">
-              Plant-originatd mask sheet<br>
-              which conveys the<br>
-              ingredients of Centella intact
-            </p>
-          </div>
-        </div>
+      <div id="productVideoAR">
+        <video playsinline controls autoplay muted loop>
+          <source src="asset/product_video.mp4" type="video/mp4">
+        </video>
       </div>
-      <div class="swiper-slide swiper-item">
-        <div id="productRatingAR">
-          <div class="ratePoint"><span>4.9</span></div>
-          <div class="rateStar"><span class="star">★★★★★</span></div>
-          <div class="rateCount">
-            <span class="label">total review - </span><span class="count">72</span>
-          </div>
+    </div>
+    <div class="swiper-slide swiper-item">
+      <div id="content01AR">
+        <div id="contentHeader">
+          <p class="subtitle">Strong CICA</p>
+          <p class="mainTitle">Calming Mask</p>
+          <p class="point"><span>3</span> POINT</p>
         </div>
-        <div id="reviewContentAR" class="reviewContent">
-          <div class="hide-ar reviewHeader">
-            <p class="reviewStart">
-              <span>평점</span>
-              ★★★★★
-            </p>
-          </div>
-          <div class="reviewImage">
-            <img src="asset/review_photo-01.png">
-          </div>
-          <div class="reviewText">
-            <p class="title">After all Shika<br>
-              I think the doctor is the truth</p>
-            <div class="bodyDiv">
-              <p class="body">
-                In particular, as soon as I apply it, I feel soothing while wrapping my skin. The area around the ball is
-                exceptionally sensitive, but after using it a few times, it seems to calm down quickly.
+        
+        <div id="add1Active" class="contentItem">
+          <p class="title">Dermo Science<br class="hide-web">Green Science with <br class="hide-web">green power</p>
+        </div>
+        <div id="add2Active" class="contentItem">
+          <p class="title">Centella <br class="hide-web">which is rapidly <br class="hide-web">conveyed to skin<br
+            class="hide-web">with one sheet</p>
+        </div>
+        <div id="add3Active" class="contentItem">
+          <p class="title">Immediately <br class="hide-web">calming hot skin</p>
+        </div>
+        
+        <div id="additional01" class="addContent animate__animated animate__fadeInDown">
+          <div class="inner">
+            <div>
+              <div class="title">
+                <p>Dermo Science <br/>
+                  with green power</p>
+              </div>
+              <div class="topIcon"><img src="asset/plus.png"></div>
+            </div>
+            <div class="body">
+              <p>
+                Green care of Centella asiatica which protects calms and protects skin with moisture and 3 kinds of
+                minerals’ dermatology care which provides healthy energy are combined. We recommend you use
+                <span>urgent care for sensitive skin with Dr. Jart’sGreen Science.</span>
               </p>
             </div>
-          </div>
-          <div class="reviewFooter hide-ar">
-            <span class="reviewId">ari****</span>
-            <span class="reviewDate">2019.10.20</span>
+            <div class="closeBtn"><img src="asset/minus.png"></div>
           </div>
         </div>
-        <div id="relatedProductAR">
-          <div id="swiper-related-product-ar">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="wrap">
-                  <p class="title">Related Product</p>
-                  <div class="product cf">
-                    <div class="inner">
-                      <img src="asset/related-product.png">
-                      <div class="relatedInfo">
-                        <p class="name">Dermask Ultra Jet <br>Feeling solution</p>
-                        <p class="tag">#Feeling Solution Mask</p>
-                        <p class="price">25,000won</p>
-                      </div>
+        <div id="additional02" class="addContent animate__animated animate__fadeInDown">
+          <div class="inner">
+            <div>
+              <div class="title">
+                <p>Centella essence <br/>
+                  conveyed to skin <br/>
+                  rapidly with one sheet
+                </p>
+              </div>
+              <div class="topIcon"><img src="asset/bottle.png"></div>
+            </div>
+            <div class="body">
+              <p>
+                <span>Essence ingredient of Centella</span> is made into liposome with natural proteolipid and it is
+                more rapidly conveyed to skin.
+              </p>
+            </div>
+            <div class="closeBtn"><img src="asset/minus.png"></div>
+          </div>
+        </div>
+        <div id="additional03" class="addContent animate__animated animate__fadeInDown">
+          <div class="inner">
+            <div>
+              <div class="title">
+                <p>
+                  Immediately
+                  <br/>calming hot skin
+                </p>
+              </div>
+              <div class="topIcon"><img src="asset/skin.png"></div>
+            </div>
+            <div class="body">
+              <p>
+                As it contains snow ice ingredient which can be used safely even for sensitive and hot skin,
+                <span>it immediately and coolly calms hot feeling of skin.</span>
+              </p>
+            </div>
+            <div class="closeBtn"><img src="asset/minus.png"></div>
+          </div>
+        </div>
+      
+      </div>
+      <div id="content03AR">
+        <div>
+          <p class="title">
+            Plant-originatd mask sheet<br>
+            which conveys the<br>
+            ingredients of Centella intact
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide swiper-item">
+      <div id="productRatingAR">
+        <div class="ratePoint"><span>4.9</span></div>
+        <div class="rateStar"><span class="star">★★★★★</span></div>
+        <div class="rateCount">
+          <span class="label">total review - </span><span class="count">72</span>
+        </div>
+      </div>
+      <div id="reviewContentAR" class="reviewContent">
+        <div class="hide-ar reviewHeader">
+          <p class="reviewStart">
+            <span>평점</span>
+            ★★★★★
+          </p>
+        </div>
+        <div class="reviewImage">
+          <img src="asset/review_photo-01.png">
+        </div>
+        <div class="reviewText">
+          <p class="title">After all Shika<br>
+            I think the doctor is the truth</p>
+          <div class="bodyDiv">
+            <p class="body">
+              In particular, as soon as I apply it, I feel soothing while wrapping my skin. The area around the ball is
+              exceptionally sensitive, but after using it a few times, it seems to calm down quickly.
+            </p>
+          </div>
+        </div>
+        <div class="reviewFooter hide-ar">
+          <span class="reviewId">ari****</span>
+          <span class="reviewDate">2019.10.20</span>
+        </div>
+      </div>
+      <div id="relatedProductAR">
+        <div id="swiper-related-product-ar">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="wrap">
+                <p class="title">Related Product</p>
+                <div class="product cf">
+                  <div class="inner">
+                    <img src="asset/related-product.png">
+                    <div class="relatedInfo">
+                      <p class="name">Dermask Ultra Jet <br>Feeling solution</p>
+                      <p class="tag">#Feeling Solution Mask</p>
+                      <p class="price">25,000won</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="wrap">
-                  <p class="title">Related Product</p>
-                  <div class="product cf">
-                    <div class="inner">
-                      <img src="asset/related-product-black.png">
-                      <div class="relatedInfo">
-                        <p class="name">Dermask Ultra Jet <br>Porecting Solution</p>
-                        <p class="tag">#The Pore Solution Mask</p>
-                        <p class="price">20,000won</p>
-                      </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="wrap">
+                <p class="title">Related Product</p>
+                <div class="product cf">
+                  <div class="inner">
+                    <img src="asset/related-product-black.png">
+                    <div class="relatedInfo">
+                      <p class="name">Dermask Ultra Jet <br>Porecting Solution</p>
+                      <p class="tag">#The Pore Solution Mask</p>
+                      <p class="price">20,000won</p>
                     </div>
                   </div>
                 </div>
@@ -541,12 +469,12 @@
           </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
-    
-    <div class="swiper-pagenation"></div>
+    <div class="swiper-pagination"></div>
   </div>
-<!--</div>-->
+  
+  <div class="swiper-pagenation"></div>
+</div>
 
 <script>
   
@@ -554,15 +482,12 @@
     letsee.start();
     initApp();
     
-    letsee.onTrackStart(e => {
-      if (!isSwiperInitialized) {
-        // initSwiper();
-        isSwiperInitialized = true;
-      }
+    letsee.onTrackStart(() => {
     });
     letsee.onTrackEnd(() => {
     });
-    letsee.onTrackMove(() => {});
+    letsee.onTrackMove(() => {
+    });
   });
   letsee.init();
 

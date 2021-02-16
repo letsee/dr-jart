@@ -1,9 +1,13 @@
 @charset "UTF-8";
-/*@media (orientation: portrait) {
-  #content-wrapper {
-    display: block !important;
-  }
-}*/
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ff4ea9 !important;
+}
+
 #content-wrapper {
   display: block;
   position: absolute;
@@ -388,13 +392,6 @@
 
 #swiper-container {
   display: block;
-}
-#swiper-container .swiper-wrapper .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
-}
-#swiper-container .swiper-wrapper .swiper-pagination-bullet-active {
-  background-color: #ff4ea9;
 }
 #swiper-container .swiper-wrapper .swiper-item {
   height: 500px;
