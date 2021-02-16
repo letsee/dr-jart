@@ -12,7 +12,7 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <script src='https://unpkg.com/jquery@3.5.1/dist/jquery.min.js'></script>
   
-  <script src="js/lib/tween.min.js"></script>
+<!--  <script src="js/lib/tween.min.js"></script>-->
 <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>-->
   <script src="https://unpkg.com/gsap@3.6.0/dist/EasePack.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
@@ -23,10 +23,8 @@
   <script src="https://unpkg.com/swiper@6.4.11/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper@6.4.11/swiper-bundle.min.js"></script>
   
-  <!-- slick.js -->
-  <!--<script src='https://unpkg.com/slick-carousel@1.8.1/slick/slick.min.js'></script>
-  <link rel='stylesheet' href='https://unpkg.com/slick-carousel@1.8.1/slick/slick.css'>
-  <link rel='stylesheet' href='https://unpkg.com/slick-carousel@1.8.1/slick/slick-theme.css'>-->
+  <!-- animationCSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   
   <link rel="stylesheet" href="./css/style.css" type="text/css">
   <link rel="stylesheet" href="./css/main.css" type="text/css">
@@ -41,7 +39,9 @@
   </style>
   
   <style>
-  
+    .animate__animated.animate__fadeInDown {
+      --animate-duration: 0.6s;
+    }
   </style>
 </head>
 
@@ -387,10 +387,19 @@
             <p class="mainTitle">Calming Mask</p>
             <p class="point"><span>3</span> POINT</p>
           </div>
+          
           <div id="add1Active" class="contentItem">
             <p class="title">Dermo Science<br class="hide-web">Green Science with <br class="hide-web">green power</p>
+          </div>
+          <div id="add2Active" class="contentItem">
+            <p class="title">Centella <br class="hide-web">which is rapidly <br class="hide-web">conveyed to skin<br class="hide-web">with one sheet</p>
+          </div>
+          <div id="add3Active" class="contentItem">
+            <p class="title">Immediately <br class="hide-web">calming hot skin</p>
+          </div>
   
-            <div id="additional01" class="addContent">
+<!--          <div id="test" style="z-index: 500; background: red; display: none">-->
+            <div id="additional01" class="addContent animate__animated animate__fadeInDown">
               <div class="inner">
                 <div>
                   <div class="title">
@@ -409,15 +418,48 @@
                 <div class="closeBtn"><img src="asset/minus.png"></div>
               </div>
             </div>
-            
-          </div>
-          <div id="add2Active" class="contentItem">
-            <p class="title">Centella <br class="hide-web">which is rapidly <br class="hide-web">conveyed to skin<br
-              class="hide-web">with one sheet</p>
-          </div>
-          <div id="add3Active" class="contentItem">
-            <p class="title">Immediately <br class="hide-web">calming hot skin</p>
-          </div>
+            <div id="additional02" class="addContent animate__animated animate__fadeInDown">
+              <div class="inner">
+                <div>
+                  <div class="title">
+                    <p>Centella essence <br/>
+                      conveyed to skin <br/>
+                      rapidly with one sheet
+                    </p>
+                  </div>
+                  <div class="topIcon"><img src="asset/bottle.png"></div>
+                </div>
+                <div class="body">
+                  <p>
+                    <span>Essence ingredient of Centella</span> is made into liposome with natural proteolipid and it is
+                    more rapidly conveyed to skin.
+                  </p>
+                </div>
+                <div class="closeBtn"><img src="asset/minus.png"></div>
+              </div>
+            </div>
+            <div id="additional03" class="addContent animate__animated animate__fadeInDown">
+              <div class="inner">
+                <div>
+                  <div class="title">
+                    <p>
+                      Immediately
+                      <br/>calming hot skin
+                    </p>
+                  </div>
+                  <div class="topIcon"><img src="asset/skin.png"></div>
+                </div>
+                <div class="body">
+                  <p>
+                    As it contains snow ice ingredient which can be used safely even for sensitive and hot skin,
+                    <span>it immediately and coolly calms hot feeling of skin.</span>
+                  </p>
+                </div>
+                <div class="closeBtn"><img src="asset/minus.png"></div>
+              </div>
+            </div>
+<!--          </div>-->
+          
         </div>
         <div id="content03AR">
           <div>

@@ -713,7 +713,6 @@
 
         .addContent {
           display: none;
-          //opacity: 0;
           width: 370px;
           height: 300px;
           padding: 10px;
@@ -738,6 +737,7 @@
 
         #additional01 {
           display: none;
+          margin-top: 120px;
           .inner {
             .body {
               width: 336px;
@@ -758,13 +758,85 @@
                 width: 100%;
               }
             }
+            &:before {
+              color: black;
+              content: "01";
+              display: block;
+              margin-bottom: 5px;
+              font-weight: bold;
+            }
           }
-          .inner:before {
-            color: black;
-            content: "01";
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+        }
+
+        #additional02 {
+          display: none;
+          margin-top: 120px;
+          .inner {
+            .title {
+              p {
+                padding-top: 4px;
+                font-size: 23px;
+              }
+            }
+            .body {
+              width: 336px;
+              margin-top: 120px;
+              p {
+                color: #2f2f2f;
+                font-size: 20px;
+                span {
+                  color: #146f4a;
+                  font-weight: 500;
+                }
+              }
+            }
+            .topIcon {
+              width: 71px;
+              float: right;
+              img {
+                width: 100%;
+              }
+            }
+            &:before {
+              color: black;
+              content: "02";
+              display: block;
+              margin-bottom: 5px;
+              font-weight: bold;
+            }
+          }
+        }
+
+        #additional03 {
+          display: none;
+          margin-top: 120px;
+          .inner {
+            .body {
+              width: 336px;
+              margin-top: 100px;
+              p {
+                color: #2f2f2f;
+                font-size: 20px;
+                span {
+                  color: #146f4a;
+                  font-weight: 500;
+                }
+              }
+            }
+            .topIcon {
+              width: 70px;
+              float: right;
+              img {
+                width: 100%;
+              }
+            }
+            &:before {
+              color: black;
+              content: "03";
+              display: block;
+              margin-bottom: 8px;
+              font-weight: bold;
+            }
           }
         }
       }

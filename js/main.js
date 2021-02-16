@@ -12,10 +12,20 @@ let arFlag = false,
 let sliderList = [];
 let entity;
 
+/**
+ * Reset slides and additional panels.
+ */
 function resetSlide() {
   console.warn(`resetSlide`);
+  setTimeout(() => {
+    // add1Active.style.display = 'block';
+    // add2Active.style.display = 'block';
+    // add3Active.style.display = 'block';
 
-  document.getElementById('additional01').style.display = 'none';
+    add01.style.display = 'none';
+    add02.style.display = 'none';
+    add03.style.display = 'none';
+  }, 10)
 
   sliderList.forEach(xr => {
     xr.position._y = 0;
@@ -32,11 +42,31 @@ function resetSlide() {
   });
 }
 
+/**
+ * Switch additional slides.
+ * @param num
+ */
 function slide(num) {
-  const ele = sliderList[num];
-  // console.warn(ele);
+  switch (num) {
+    case 0:
+      add01.style.display = 'block';
+      add02.style.display = 'none';
+      add03.style.display = 'none';
+      break;
+    case 1:
+      add01.style.display = 'none';
+      add02.style.display = 'block';
+      add03.style.display = 'none';
+      break;
+    case 2:
+      add01.style.display = 'none';
+      add02.style.display = 'none';
+      add03.style.display = 'block';
+      break;
+  }
 
-  /*TweenLite.to(
+  /* const ele = sliderList[num];
+  TweenLite.to(
       ele.position,
       0.5,
       {
@@ -78,20 +108,6 @@ function slide(num) {
   tween.start();
 }*/
 
-/*function toggleARView() {
-  if (!arFlag) {
-    letsee.init(config, onLoaded);
-    arFlag = true;
-  } else {
-    if (letsee.isPause) {
-      letsee.resume();
-    } else {
-      letsee.pause(true);
-      resetSlide();
-    }
-  }
-}*/
-
 /**
  * Initialize Swiper elements.
  */
@@ -119,9 +135,8 @@ function initSwiper() {
       clickable: 'true',
     },
     on: {
-      touchStart: function() {
-        console.log('change');
-        // resetSlide();
+      slideChange: function() {
+        resetSlide();
       },
     },
   });
@@ -142,6 +157,9 @@ function initSwiper() {
 
 }
 
+/**
+ * Add XRElements into Entity.
+ */
 function addXRElementsIntoEntity() {
 
   entity = letsee.getEntityByUri('dr-jart.json');
@@ -155,7 +173,6 @@ function addXRElementsIntoEntity() {
     xr.position.set(0, 0, 1);
     xr.element.style.visibility = 'hidden';
   });
-  console.warn(sliderList);
 }
 
 /**
@@ -201,16 +218,15 @@ window.onload = () => {
   add1Active     = document.getElementById('add1Active');
   add2Active     = document.getElementById('add2Active');
   add3Active     = document.getElementById('add3Active');
-  add01          = document.getElementById('additional01');
-  add02          = document.getElementById('additional02');
-  add03          = document.getElementById('additional03');
+  add01          = document.getElementById('additional01'); // slide_0
+  add02          = document.getElementById('additional02'); // slide_1
+  add03          = document.getElementById('additional03'); // slide_2
 
   mobile.addEventListener('click', (e) => {
     arHeader.style.display = 'none';
     arBtn.style.display = 'block';
     toggleARView();
   });
-
   arBtn.addEventListener('click', (e) => {
     console.warn(`AR MODE`);
     arBtn.style.display = 'none';
@@ -221,20 +237,8 @@ window.onload = () => {
 
     initSwiper();
   });
-
-  add1Active.addEventListener('click', (e) => {
-    document.getElementsByClassName('addContent')[0].style.display = 'block';
-
-    // resetSlide();
-    slide(0);
-  });
-  add2Active.addEventListener('click', (e) => {
-    // resetSlide();
-    slide(1);
-  });
-  add3Active.addEventListener('click', (e) => {
-    // resetSlide();
-    slide(2);
-  });
+  add1Active.addEventListener('click', () => slide(0));
+  add2Active.addEventListener('click', () => slide(1));
+  add3Active.addEventListener('click', () => slide(2));
 
 }
