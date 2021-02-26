@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Dr.Jart+</title>
   
-  <script src="letsee.js"></script>
-  <!--  <script src="https://app.letsee.io/webar?key=58eb80abb9fe9589e7f3435f52342ed26d46612af1e2cef7fbf472da1c9d4eea&env=dev"></script>-->
+  <!-- Letsee SDK -->
+  <script src="https://s-developer.letsee.io/api/webar?key=e86cb0cdb2003c5691e0ce1c3e3138e1775389190940400e9dbeb6846bb26fc1"></script>
   
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700,900|Roboto:400,700,900&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -480,7 +480,10 @@
   
   letsee.ready(() => {
     letsee.start();
-    initApp();
+    
+    setTimeout(() => {
+      initApp();
+    }, 5000)
     
     letsee.onTrackStart(() => {
     });
