@@ -110,12 +110,12 @@ function addXRElementsIntoEntity() {
 
   const entity = letsee.getEntityByUri('dr-jart.json');
 
-  let xr_1 = letsee.createXRElement(getElementString(add01.innerHTML));
-  let xr_2 = letsee.createXRElement(getElementString(add02.innerHTML));
-  let xr_3 = letsee.createXRElement(getElementString(add03.innerHTML));
-  letsee.bindXRElement(xr_1, entity);
-  letsee.bindXRElement(xr_2, entity);
-  letsee.bindXRElement(xr_3, entity);
+  let xr_1 = letsee.createXRElement(getElementString(add01.innerHTML), entity);
+  let xr_2 = letsee.createXRElement(getElementString(add02.innerHTML), entity);
+  let xr_3 = letsee.createXRElement(getElementString(add03.innerHTML), entity);
+  // letsee.bindXRElement(xr_1, entity);
+  // letsee.bindXRElement(xr_2, entity);
+  // letsee.bindXRElement(xr_3, entity);
 
   sliderList.push(xr_1, xr_2, xr_3);
   sliderList.forEach(xr => {
