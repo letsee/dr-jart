@@ -108,7 +108,7 @@ function getElementString(str){
  */
 function addXRElementsIntoEntity() {
 
-  const entity = letsee.getEntityByUri('https://s-developer.letsee.io/api-tm/target-manager/target-uid/604598b94e5b9fac00210033');
+  const entity = letsee.getEntityByUri('https://developer.letsee.io/api-tm/target-manager/target-uid/60519a98672274a33ec9f493');
 
   let xr_1 = letsee.createXRElement(getElementString(add01.innerHTML), entity);
   let xr_2 = letsee.createXRElement(getElementString(add02.innerHTML), entity);
