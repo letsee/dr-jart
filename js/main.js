@@ -52,7 +52,6 @@ function slide(num) {
  */
 function initSwiper() {
   console.warn(`initSwiper`);
-
   let mainSwiper = new Swiper('#swiper-container', {
     effect: 'coverflow',
     loop: false,

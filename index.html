@@ -3,37 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Dr.Jart+</title>
-  
+
   <!-- Letsee SDK -->
-  <script src="https://developer.letsee.io/api/webar?key=197c8eeb914c15d361bf97d7fd56ceb3aeda134d50a746594634bb44cb099736"></script>
-  
+  <script src="https://developer.letsee.io/api/webar?key=bb26694093630c05eeb2322b2ee33c86ee36a91a51402932b6fcf7f510fcb410"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700,900|Roboto:400,700,900&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <script src='https://unpkg.com/jquery@3.5.1/dist/jquery.min.js'></script>
-  
+
   <!-- swiper.js -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@6.4.11/swiper-bundle.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@6.4.11/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper@6.4.11/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper@6.4.11/swiper-bundle.min.js"></script>
-  
+
   <!-- animationCSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  
+
   <!-- Client code -->
   <link rel="stylesheet" href="./css/style.css" type="text/css">
   <link rel="stylesheet" href="./css/main.css" type="text/css">
   <script src="js/main.js"></script>
   <style media="place" type="text/css">
     #swiper-container {
-      -letsee-target: uri('https://developer.letsee.io/api-tm/target-manager/target-uid/60519a98672274a33ec9f493');
-      width: 460px;
-      height: 820px;
+      -letsee-target: uri('https://developer.letsee.io/api-tm/target-manager/target-uid/608615ab130fc5b620875de7');
+      width: 302px;
+      height: 403px;
       /*width: 124px;
       height: 204px*/;
     }
   </style>
-  
+
   <style>
     .animate__animated.animate__fadeInDown {
       --animate-duration: 0.6s;
@@ -55,7 +55,7 @@
       <div id="mobile">Web View</div>
       <div id="webview"><img src="asset/ic_webview.png"/></div>
     </div>
-    
+
     <div id="productPicture">
       <div id="productMedia">
         <img src="asset/cica.png">
@@ -73,7 +73,7 @@
         </div>
       </div>
     </div>
-    
+
     <div id="productTop">
       <div id="productLabel">
         <span>BEST</span>
@@ -84,7 +84,7 @@
         <div class="price">$17.25</div>
       </div>
     </div>
-    
+
     <div id="productRating">
       <div id="ratePoint"><span>4.9</span></div>
       <div id="rateStar"><span>★★★★★</span></div>
@@ -92,7 +92,7 @@
         <span class="label">total review - </span><span class="count">72</span>
       </div>
     </div>
-    
+
     <div id="detail">
       <div id="detailTab">
         <ul>
@@ -287,13 +287,13 @@
         </div>
       </div>
     </div>
-    
+
     <div id="cartBtn">
       <div id="buyBtn" onclick="location.href='https://us.drjart.com/products/dermask-masks-peeling-solution'">Buy now
       </div>
       <div id="wishList"><img src="asset/wishlist.png"></div>
     </div>
-  
+
   </div>
 </div>
 
@@ -319,7 +319,7 @@
           <p class="mainTitle">Calming Mask</p>
           <p class="point"><span>3</span> POINT</p>
         </div>
-        
+
         <div id="add1Active" class="contentItem">
           <p class="title">Dermo Science<br class="hide-web">Green Science with <br class="hide-web">green power</p>
         </div>
@@ -330,7 +330,7 @@
         <div id="add3Active" class="contentItem">
           <p class="title">Immediately <br class="hide-web">calming hot skin</p>
         </div>
-        
+
         <div id="additional01" class="addContent animate__animated animate__fadeInDown">
           <div class="inner">
             <div>
@@ -390,7 +390,7 @@
             <div class="closeBtn"><img src="asset/minus.png"></div>
           </div>
         </div>
-      
+
       </div>
       <div id="content03AR">
         <div>
@@ -474,19 +474,19 @@
     </div>
     <div class="swiper-pagination"></div>
   </div>
-  
+
   <div class="swiper-pagenation"></div>
 </div>
 
 <script>
-  
+
   letsee.ready(() => {
     letsee.start();
-    
+
     setTimeout(() => {
       initApp();
     }, 5000)
-    
+
     letsee.onTrackStart(() => {
     });
     letsee.onTrackEnd(() => {
