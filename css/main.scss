@@ -910,6 +910,48 @@
         color: white;
       }
 
+      .rightDemoImage , .leftDemoImage {
+        width: 100% ;//375px;
+        height: 145px;
+        padding: 16px 28px;
+        border-radius: 7px;
+        background-color: rgba(28, 28, 28, 0.9);
+        position: relative;
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+        margin-bottom:15px;
+      }
+
+      .rightDemoImage:nth-child(1) {
+        background-image: url('../asset/1.png');
+      }
+      .rightDemoImage:nth-child(2) {
+        background-image: url('../asset/2.png');
+      }
+      .rightDemoImage:nth-child(3) {
+        background-image: url('../asset/3.png');
+      }
+
+      .leftDemoImage:nth-child(1){
+        background-image: url('../asset/4.png');
+      }
+      #productVideoAR{
+        padding:0 !important;
+        background: transparent;
+      }
+      #productVideoAR>video{
+        height:100% !important;
+      }
+
+      .leftDemoImage:nth-child(2){
+        background-image: url('../asset/4.png');
+        margin-bottom: 15px !important;
+      }
+
+      .leftDemoImage:nth-child(3){
+        background-image: url('../asset/5.png');
+      }
+
       #reviewContentAR {
         width: 100% ;//390px;
         height: 170px;
