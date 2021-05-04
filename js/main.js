@@ -131,21 +131,29 @@ function initApp() {
 
   // addXRElementsIntoEntity();
 
-  document.querySelectorAll('.closeBtn').forEach(val => {
+/*  document.querySelectorAll('.closeBtn').forEach(val => {
     val.addEventListener('click', resetSlide);
-  });
-  initSwiper();
-  setTimeout( ()=>{
-    const evt = document.createEvent("HTMLEvents");
+  });*/
+/*    const evt = document.createEvent("HTMLEvents");
     evt.initEvent('resize', true, false);
-    // window.dispatchEvent(evt);
-  }, 300)
+    window.dispatchEvent(evt);*/
 
 }
 
 window.onload = () => {
 
-  contentWrapper = document.getElementById('content-wrapper');
+/*  setTimeout( () => {
+    initSwiper();
+    const agt = navigator.userAgent.toLowerCase();
+    if(agt.indexOf("safari") != -1){
+
+    } else {
+
+    }
+  } , 1000)*/
+
+
+  /*contentWrapper = document.getElementById('content-wrapper');
   swiperContainer = document.getElementById('swiper-container');
   mobile         = document.getElementById('mobile');
   arHeader       = document.getElementById('arHeader');
@@ -171,7 +179,7 @@ window.onload = () => {
     swiperContainer.style.display = 'block';
 
     initSwiper();
-  });
+  });*/
 /*  add1Active.addEventListener('click', () => slide(0));
   add2Active.addEventListener('click', () => slide(1));
   add3Active.addEventListener('click', () => slide(2));*/

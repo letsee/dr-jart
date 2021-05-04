@@ -942,7 +942,8 @@
       }
       #productVideoAR{
         padding:0 !important;
-        background: transparent;
+       /* background: transparent;*/
+        background-image: url('../asset/5.png');
       }
       #productVideoAR>video{
         height:100% !important;

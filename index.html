@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dr.Jart+</title>
+  <title>Amorepacific</title>
 
   <!-- Letsee SDK -->
   <script src="https://developer.letsee.io/api/webar?key=bb26694093630c05eeb2322b2ee33c86ee36a91a51402932b6fcf7f510fcb410"></script>
@@ -146,10 +146,11 @@
               can be differences between individuals.
             </p>
           </div>
-          <div id="productVideo">
-            <video id="productVideoContent" playsinline controls autoplay muted loop>
+          <div id="productVideo"  >
+            <video id="productVideoContent" playsinline controls muted loop preload="auto" >
               <source src="asset/product_video.mp4" type="video/mp4">
             </video>
+            <div style="background-image: url('asset/3.png'); background-size: 100% 100%; background-repeat: no-repeat; width:100%; height:100%; float:left; " ></div>
           </div>
           <div style="display: none;" class="contentBody" id="content02">
             <div class="">
@@ -314,8 +315,8 @@
       </div>-->
       <div class="leftDemoImage"></div>
       <div class="leftDemoImage" id="productVideoAR">
-        <video playsinline controls autoplay muted loop>
-          <source src="asset/product_video.mp4" type="video/mp4">
+        <video playsinline controls  muted loop>
+          <source src="asset/product_video.mp4#t=1" type="video/mp4">
         </video>
       </div>
       <div class="leftDemoImage"></div>
@@ -424,16 +425,28 @@
   Buy now&nbsp;!
 </div>
 <script>
-
+  let flag = true;
   letsee.ready(() => {
-    letsee.start();
+    const agt = navigator.userAgent.toLowerCase();
+    if(agt.indexOf("safari") != -1){
+      setTimeout(() => {
+        //  initApp();
+        letsee.start();
+      }, 100)
+    } else {
+      letsee.start();
+    }
 
-    /*setTimeout(() => {*/
-      initApp();
-
-/*    }, 5000)*/
 
     letsee.onTrackStart(() => {
+      if(flag){
+        const evt = document.createEvent("HTMLEvents");
+        evt.initEvent('resize', true, false);
+        window.dispatchEvent(evt);
+        initSwiper();
+        flag = false;
+      }
+
     });
     letsee.onTrackEnd(() => {
     });
