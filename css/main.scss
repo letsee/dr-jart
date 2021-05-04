@@ -23,7 +23,6 @@
   @include abs-full;
   height: 100vh;
   z-index: 1000;
-  z-index: 1000;
 
   header {
     height: 50px;
@@ -493,9 +492,11 @@
   display: block;
 
   .swiper-wrapper {
+    padding-top: 50px;
 
     .swiper-item {
-      height: 500px;
+      height: 904px;
+      width: 400px;
       padding: 0 20px 0 20px;
       display: flex;
       flex-direction: column;
@@ -911,8 +912,8 @@
       }
 
       .rightDemoImage , .leftDemoImage {
-        width: 100% ;//375px;
-        height: 145px;
+        width: 600px;
+        height: 300px;
         padding: 16px 28px;
         border-radius: 7px;
         background-color: rgba(28, 28, 28, 0.9);

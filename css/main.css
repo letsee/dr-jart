@@ -19,7 +19,6 @@
   background: white;
   height: 100vh;
   z-index: 1000;
-  z-index: 1000;
 }
 #content-wrapper header {
   height: 50px;
@@ -393,8 +392,12 @@
 #swiper-container {
   display: block;
 }
+#swiper-container .swiper-wrapper {
+  padding-top: 50px;
+}
 #swiper-container .swiper-wrapper .swiper-item {
-  height: 500px;
+  height: 904px;
+  width: 400px;
   padding: 0 20px 0 20px;
   display: flex;
   flex-direction: column;
@@ -755,8 +758,8 @@
   color: white;
 }
 #swiper-container .swiper-wrapper .swiper-item .rightDemoImage, #swiper-container .swiper-wrapper .swiper-item .leftDemoImage {
-  width: 100%;
-  height: 145px;
+  width: 600px;
+  height: 300px;
   padding: 16px 28px;
   border-radius: 7px;
   background-color: rgba(28, 28, 28, 0.9);
