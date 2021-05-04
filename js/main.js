@@ -15,12 +15,12 @@ let sliderList = [];
  * Reset slides and additional panels.
  */
 function resetSlide() {
-  setTimeout(() => {
+/*  setTimeout(() => {
 
     add01.style.display = 'none';
     add02.style.display = 'none';
     add03.style.display = 'none';
-  }, 10)
+  }, 10)*/
 }
 
 /**
@@ -109,7 +109,7 @@ function addXRElementsIntoEntity() {
 
   const entity = letsee.getEntityByUri('https://developer.letsee.io/api-tm/target-manager/target-uid/60519a98672274a33ec9f493');
 
-  let xr_1 = letsee.createXRElement(getElementString(add01.innerHTML), entity);
+/*  let xr_1 = letsee.createXRElement(getElementString(add01.innerHTML), entity);
   let xr_2 = letsee.createXRElement(getElementString(add02.innerHTML), entity);
   let xr_3 = letsee.createXRElement(getElementString(add03.innerHTML), entity);
   // letsee.bindXRElement(xr_1, entity);
@@ -120,7 +120,7 @@ function addXRElementsIntoEntity() {
   sliderList.forEach(xr => {
     xr.position.set(0, 0, 1);
     xr.element.style.visibility = 'hidden';
-  });
+  });*/
 }
 
 /**
@@ -129,11 +129,18 @@ function addXRElementsIntoEntity() {
 function initApp() {
   console.warn(`initApp`);
 
-  addXRElementsIntoEntity();
+  // addXRElementsIntoEntity();
 
   document.querySelectorAll('.closeBtn').forEach(val => {
     val.addEventListener('click', resetSlide);
   });
+  initSwiper();
+  setTimeout( ()=>{
+    const evt = document.createEvent("HTMLEvents");
+    evt.initEvent('resize', true, false);
+    // window.dispatchEvent(evt);
+  }, 300)
+
 }
 
 window.onload = () => {
@@ -153,7 +160,7 @@ window.onload = () => {
   mobile.addEventListener('click', (e) => {
     arHeader.style.display = 'none';
     arBtn.style.display = 'block';
-    toggleARView();
+    // toggleARView();
   });
   arBtn.addEventListener('click', (e) => {
     console.warn(`AR MODE`);
@@ -165,8 +172,14 @@ window.onload = () => {
 
     initSwiper();
   });
-  add1Active.addEventListener('click', () => slide(0));
+/*  add1Active.addEventListener('click', () => slide(0));
   add2Active.addEventListener('click', () => slide(1));
-  add3Active.addEventListener('click', () => slide(2));
+  add3Active.addEventListener('click', () => slide(2));*/
+  // 바로 AR mode로 가기위해
 
+
+    /*const evt = document.createEvent("HTMLEvents");
+    evt.initEvent('resize', true, false);
+    window.dispatchEvent(evt);
+    */
 }
