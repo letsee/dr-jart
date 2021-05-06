@@ -147,9 +147,9 @@
             </p>
           </div>
           <div id="productVideo"  >
-            <video id="productVideoContent" playsinline controls muted loop preload="metadata" >
+            <!--<video id="productVideoContent" playsinline controls muted loop preload="metadata" >
               <source src="asset/product_video.mp4" type="video/mp4">
-            </video>
+            </video>-->
           </div>
           <div style="display: none;" class="contentBody" id="content02">
             <div class="">
@@ -314,9 +314,10 @@
       </div>-->
       <div class="leftDemoImage"></div>
       <div class="leftDemoImage" id="productVideoAR">
-        <video playsinline controls  muted loop id="realVideo" preload="auto">
+       <video controls playsinline  muted loop id="realVideo" width="540" height="260">
           <source src="asset/product_video.mp4#t=1" type="video/mp4">
         </video>
+
       </div>
       <div class="leftDemoImage"></div>
     </div>
@@ -424,27 +425,37 @@
   Buy now&nbsp;!
 </div>
 <script>
+  let video123 = document.getElementById('realVideo');
   let flag = true;
+  const evt = document.createEvent("HTMLEvents");
+  evt.initEvent('resize', true, false);
+
   letsee.ready(() => {
     letsee.start();
-
-
     letsee.onTrackStart(() => {
-      if(flag){
-        const evt = document.createEvent("HTMLEvents");
-        evt.initEvent('resize', true, false);
-        window.dispatchEvent(evt);
+      window.dispatchEvent(evt);
+      // initSwiper();
+      const agent = navigator.userAgent.toLowerCase();
+        // if(agent.indexOf('safari') == -1 ) {
+        video123.play();
+        window.innerHeight = innerHeight -1;
         initSwiper();
-        flag = false;
-      }
+      setTimeout( () => {
+        window.innerHeight = innerHeight + 1;
+        video123.play();
+      },5000);
 
     });
     letsee.onTrackEnd(() => {
+
     });
     letsee.onTrackMove(() => {
+
     });
   });
   letsee.init();
+
+
 
 </script>
 
