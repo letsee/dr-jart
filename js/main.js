@@ -141,7 +141,13 @@ function initApp() {
 }
 
 window.onload = () => {
+  const video = document.getElementById('realVideo');
 
+  video.addEventListener('canplay', () => {
+    console.error('11111');
+    video.muted = true;
+    video.play();
+  });
 /*  setTimeout( () => {
     initSwiper();
     const agt = navigator.userAgent.toLowerCase();
